@@ -1,15 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import 'babel-polyfill'
 
-import { Provider } from "react-redux";
-import store from "./redux/store";
+import React from 'react'
+import { render } from 'react-dom'
+import Root from './containers/Root'
 
-import TodoApp from "./TodoApp";
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <Provider store={store}>
-    <TodoApp />
-  </Provider>,
-  rootElement
-);
+render(<Root />, document.getElementById('root'))
